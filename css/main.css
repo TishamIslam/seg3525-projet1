@@ -1,0 +1,47 @@
+.angel-rhapsody {
+    font-family: 'angel_rhapsodyregular',  sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color: #c72b2b ; /* same as .text-primary-light */
+}
+
+#accueil-splash {
+    height: 100vh; width: 100%; 
+    background-image: url('../images/bullying-at-work.jpg'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+}
+#accueil-splash > div {
+    background-color: #212529B0;
+}
+
+.text-outline-dark {
+    text-shadow: -1px 1px 0 #100000,
+    1px 1px 0 #100000,
+    1px -1px 0 #100000,
+    -1px -1px 0 #100000;
+}
+
+.text-outline-light {
+    text-shadow: -1px 1px 0 #efe0e0,
+    1px 1px 0 #efe0e0,
+    1px -1px 0 #efe0e0,
+    -1px -1px 0 #efe0e0;
+}
+
+#accueil-splash-small {
+    height: 90vh; width: 100%; 
+    background-image: url('../images/bloody_skull_design_by_ds_designs_on_da-d5rj06d.png'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* object-fit: cover; */
+    background-size: cover;
+}
+
+.bg-body {
+    background-color: #EFE0E0 !important;
+}
+
+/* .bg-primary-light-trans */
