@@ -5,6 +5,13 @@
     color: #c72b2b ; /* same as .text-primary-light */
 }
 
+.bradley-gratis {
+    font-family: 'bradley_gratisregular',  sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color: #c72b2b ; /* same as .text-primary-light */
+}
+
 #accueil-splash {
     height: 100vh; width: 100%; 
     background-image: url('../images/bullying-at-work.jpg'); 
@@ -29,6 +36,18 @@
     1px 1px 0 #efe0e0,
     1px -1px 0 #efe0e0,
     -1px -1px 0 #efe0e0;
+}
+
+.profile-pic {
+    width: 96px;
+    height: 96px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.rating-color{
+    color:#fbc634 !important;
 }
 
 #accueil-splash-small {
