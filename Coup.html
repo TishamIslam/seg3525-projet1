@@ -19,12 +19,14 @@
 <body class="bg-body">
     <div w3-include-html="header.html"></div>
 
-    <div class="banner-parent banner-right w-100 bg-white py-2 d-lg-none"
+    <!-- Banner for small screens -->
+    <div class="banner-parent banner-right w-100 bg-white py-2 mt-3 d-lg-none"
         style="background-image: url(images/sniper.webp);">
         <span class="display-2 m-2 p-2 text-primary-light align-top bg-dark bg-opacity-75 
         fs-1  text-outline-dark">Arranger un coup</span>
     </div>
 
+    <!-- Banner for large screens -->
     <div class="w-100 d-none d-lg-block position-relative">
         <div class="banner-parent row g-0">
             <div class="bg-black banner-left col" style="background-image: url(images/gunshot.webp);"></div>
@@ -33,7 +35,9 @@
         <h2 class="m-2 p-2 text-primary-light bg-dark bg-opacity-50
                 fs-1  text-outline-dark absolute-center">Arranger un coup</h2>
     </div>
-    <div class="container">
+
+    <!-- Formulaire -->
+    <div class="container py-3">
         <form action="Confirmation.html" class="mb-5" method="get" >
             <h3 class=" text-primary-light">
                 Informations sur votre victime
@@ -41,13 +45,13 @@
             <span>* Indique qu'un info est requise</span>
             <br><br>
             <label for="nom-victime">Nom Complet *</label>
-            <input class="form-control mb-2" type="text" name="nom-victime" id="nom-victime">
+            <input required class="form-control mb-3" type="text" name="nom-victime" id="nom-victime">
 
             <label for="adresse-victime">Adresse Complet *</label>
-            <input class="form-control mb-2" type="text" name="adresse-victime" id="adresse-victime">
+            <input required class="form-control mb-3" type="text" name="adresse-victime" id="adresse-victime">
 
-            <fieldset>
-                <legend class="h4 text-primary-light">Expert(s) Préféré(s) *</legend>
+            <fieldset class="mb-3">
+                <legend class="h5 text-primary-light">Expert(s) Préféré(s) *</legend>
                 <div class="form-check">
                     <input type="checkbox" name="expert-none" class="form-check-input" value="NA">
                     <label for="expert-none" class="form-check-label">Pas de préférence</label>
@@ -74,10 +78,10 @@
             </fieldset>
 
             <label for="reference">Référencé par: </label>
-            <input class="form-control mb-2" type="text" name="reference" id="reference">
+            <input class="form-control mb-3" type="text" name="reference" id="reference">
 
             <label for="methode">Quel service est ce que vous voulez? *</label>
-            <select class="form-select mb-2" name="methode" id="methode">
+            <select required class="form-select mb-3" name="methode" id="methode">
                 <option value="ME"> Meurtre Explicite</option>
                 <option disabled> > Je veux envoyer un message</option>
                 <option disabled> > Coût au moins 40000 $</option>
@@ -88,20 +92,20 @@
                 <option disabled> > Je veux que le monde pense que c'était un accident</option>
                 <option disabled> > Coût au moins 25000 $</option>
                 <option value="IF">Infiltration </option>
-                <option disabled> > Je veux voler quelque chose importantt</option>
+                <option disabled> > Je veux voler quelque chose important ou saboter quelqu'un.</option>
                 <option disabled> > Coût au moins 30000 $</option>
                 <option value="AU">Autre </option>
-                <option disabled> > Je veux quelque chose différent</option>
+                <option disabled> > Je veux quelque chose de spécifique.</option>
                 <option disabled> > Généralement coût au moins 35000 $, voir FAQ pour détails</option>
             </select>
 
-            <label for="images-victime"></label>
-            <input multiple class="form-control mb-4" type="file" name="images-victime" id="images-victime">
+            <label for="images-victime">Télécharger au moins 5 images de votre cible</label>
+            <input required multiple class="form-control mb-4" type="file" name="images-victime" id="images-victime">
 
             <!-- form pour discuter les détails -->
             <h3 class="text-primary-light "> Discuter les détails </h3>
             <span>* Indique qu'un info est requise</span>
-            <details>
+            <details class="mb-3">
                 <summary>Pourquoi est ce que je dois discuter ça?</summary>
                 <p>Car il y a beaucoup de détails qu'on doit avoir pour
                     donner vous le meilleur service possible, cela nécessite
@@ -114,22 +118,22 @@
             </details>
 
             <label for="nom">Nom Complet *</label>
-            <input class="form-control mb-2" type="text" name="nom" id="nom">
+            <input required class="form-control mb-3" type="text" name="nom" id="nom">
 
-            <label for="adresse-victime">Adresse Complet *</label>
-            <input class="form-control mb-2" type="text" name="adresse" id="adresse">
+            <label for="adresse">Adresse Complet *</label>
+            <input required class="form-control mb-3" type="text" name="adresse" id="adresse">
 
             <label for="discussion-date">Date de discussion * </label>
-            <input class="form-control mb-2" type="date" name="discussion-date" id="discussion-date">
+            <input required class="form-control mb-3" type="date" name="discussion-date" id="discussion-date">
 
             <label for="discussion-temps">Temps de discussion * </label>
-            <input class="form-control mb-2" type="time" name="discussion-temps" id="discussion-temps">
+            <input required class="form-control mb-3" type="time" name="discussion-temps" id="discussion-temps">
 
             <label for="telephone">Numéro de Téléphone * </label>
-            <input class="form-control mb-2" type="tel" name="telephone" id="telephone">
+            <input required class="form-control mb-3" type="tel" name="telephone" id="telephone">
 
             <label for="courriel">Adresse Courriel * </label>
-            <input class="form-control mb-2" type="email" name="courriel" id="courriel">
+            <input required class="form-control mb-3" type="email" name="courriel" id="courriel">
 
             <button type="submit" class="btn btn-primary">Soumettre</button>
 

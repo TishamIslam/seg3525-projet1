@@ -40,6 +40,8 @@
     border-color: #561010;
   }
   .btn-primary:focus, .btn-primary.focus {
+    background-color: #631313;
+    border-color: #561010;
     box-shadow: 0 0 0 0.2rem rgba(129, 25, 25, 0.5);
   }
   .btn-primary.disabled, .btn-primary:disabled {
