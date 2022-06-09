@@ -19,15 +19,15 @@
 <body class="bg-body">
 	<div w3-include-html="header.html"></div>
 
-	<div id="accueil-splash" class="container-fluid p-2 d-lg-block d-none">
+	<div class="container-fluid splash splash-desktop p-2 d-lg-block d-none" style="background-image: url(images/bullying-at-work.jpg);">
 		<!-- <hr> -->
-		<div class="m-2 p-2 text-primary-light w-50">
-			<span class="fs-1 bradley-gratis text-outline-dark">Quelqu'un ruine votre vie et vous voulez qu'ils
+		<div class="m-2 p-2 text-primary-light w-50 bg-dark bg-opacity-50">
+			<span class="fs-1  text-outline-dark">Quelqu'un ruine votre vie et vous voulez qu'ils
 				n'existent plus?</span><br>
 			<span class="fs-3 text-outline-dark"><i>Trouvez un solution ici!</i></span>
 		</div>
 	</div>
-	<div id="accueil-splash-small" class="container-fluid p-2 d-lg-none">
+	<div class="splash splash-mobile container-fluid p-2 d-lg-none" style="background-image: url('images/bloody_skull_design_by_ds_designs_on_da-d5rj06d.png');">
 		<div class="container-fluid p-2 text-primary d-lg-none text-center">
 			<span class="h2">Quelqu'un ruine votre vie et vous voulez qu'ils n'existent plus?</span><br>
 			<span class="h3">Trouvez un solution ici!</span>
@@ -36,7 +36,7 @@
 
 	<div class="container py-5">
 		<div class="w-75 mx-auto">
-			<h2 class="pb-2 fs-1 bradley-gratis"> EZ Dead - Notre Mission</h2>
+			<h2 class="pb-2 fs-1 "> EZ Dead - Notre Mission</h2>
 			<p > À EZ Dead, nous croyons dans des solutions qui défient les conventions, y compris, mais sans s'y
 				limiter, le meurtre. Nous ne pouvons pas atteindre un objectif aussi noble qu'avec l'aide de nos experts: </p>
 		</div>
@@ -120,13 +120,13 @@
 	</div>
 
 	<div class="container px-4 py-5">
-		<h2 class="pb-2 fs-1 bradley-gratis">Nos Services</h2>
+		<h2 class="pb-2 fs-1 ">Nos Services</h2>
 		<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
 			<div class="feature col">
 				<div class="d-inline-flex align-items-center justify-content-center mb-3">
 					<img src="images/knife.png" alt="Knife icon">
 				</div>
-				<h2 class="bradley-gratis">Meurtres explicites</h2>
+				<h2 class="">Meurtres explicites</h2>
 				<p>On offre des meurtres qui sont spécialement conçus pour envoyer un message au parties liées. Lorem
 					ipsum dolor sit, amet consectetur adipisicing elit. Eos ipsa voluptate assumenda earum doloribus cum
 					impedit consectetur reiciendis voluptatem blanditiis!</p>
@@ -141,7 +141,7 @@
 				<div class="d-inline-flex align-items-center justify-content-center mb-3">
 					<img src="images/drugs.png" alt="Drugs icon">
 				</div>
-				<h2 class="bradley-gratis">Implantation de Preuves</h2>
+				<h2 class="">Implantation de Preuves</h2>
 				<p>On peut infiltrer dans le domicile de votre cible et implanter du évidence qui ferait en sorte que
 					vous ne les reverrez jamais, si vous ne voulez pas les tuer directement. Lorem ipsum dolor sit elit.
 					Illo dolores cum voluptatem saepe. </p>
@@ -154,9 +154,9 @@
 			</div>
 			<div class="feature col">
 				<div class="d-inline-flex align-items-center justify-content-center mb-3">
-					<img src="images/invisible-symbol.png" alt="Drugs icon">
+					<img src="images/accident.png" alt="Accident icon">
 				</div>
-				<h2 class="bradley-gratis">Mort "accidentelle"</h2>
+				<h2 class="">Mort "accidentelle"</h2>
 				<p>Si vous voulez un méthode discrète telle que personne ne saura jamais que le mort de votre cible
 					était arrangé, nos spécialistes peuvent vous aider. Lorem ipsum dolor sit amet consectetur
 					adipisicing autem.</p>
@@ -170,11 +170,9 @@
 		</div>
 	</div>
 
-	<!-- <div class="b-example-divider"></div> -->
-
 	<div class="container-fluid mb-5">
-		<h2 class="text-center bradley-gratis fs-1">Revues des clients</h2>
-		<div id="carousel-revue-client" class="carousel carousel-dark slide" data-bs-ride="false">
+		<h2 class="text-center  fs-1">Revues des clients</h2>
+		<div id="carousel-revue-client" class="carousel carousel-dark slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carousel-revue-client" data-bs-slide-to="0" class="active"
 					aria-current="true" aria-label="Slide 1"></button>
@@ -183,12 +181,12 @@
 				<button type="button" data-bs-target="#carousel-revue-client" data-bs-slide-to="2"
 					aria-label="Slide 3"></button>
 			</div>
-			<div class="carousel-inner">
+			<div class="carousel-inner ">
 				<div class="carousel-item active">
-					<div class="card mx-auto">
+					<div class="card col-12 col-md-9 col-xl-6 mx-auto">
 						<div class="card-header py-3">
 							<img src="images/profile.png" class="rounded-circle profile-pic" alt="M16">
-							<span class="pl-2 fs-3">MI6 - Secret Intelligence Service</span>
+							<span class="fs-3 d-block d-lg-inline">MI6 - Secret Intelligence Service</span>
 							<div class="fs-2 rating-color">
 								<i class="bi bi-star-fill"></i>
 								<i class="bi bi-star-fill"></i>
@@ -213,10 +211,10 @@
 					</div>
 				</div>
 				<div class="carousel-item">
-					<div class="card w-50 mx-auto">
-						<div class="card-header py-3">
+					<div class="card col-12 col-md-9 col-xl-6 mx-auto">
+						<div class="card-header py-3 d-block d-lg-inline">
 							<img src="images/David_Sarif_MD.webp" class="rounded-circle profile-pic pr-3" alt="David Sarif">
-							<span class="pl-2 fs-3">David Sarif - CEO de Sarif Industries</span>
+							<span class="fs-3 d-block d-lg-inline">David Sarif - CEO de Sarif Industries</span>
 							<div class="fs-2 rating-color">
 								<i class="bi bi-star-fill"></i>
 								<i class="bi bi-star-fill"></i>
@@ -241,10 +239,10 @@
 					</div>
 				</div>
 				<div class="carousel-item ">
-					<div class="card w-50 mx-auto">
-						<div class="card-header py-3">
+					<div class="card col-12 col-md-9 col-xl-6 mx-auto">
+						<div class="card-header py-3 d-block d-lg-inline">
 							<img src="images/Emily_Kaldwin.webp" class="rounded-circle profile-pic" alt="Emily Kaldwin">
-							<span class="pl-2 fs-3">Emily Drexel Lela Kaldwin - Impératrice des Isles</span>
+							<span class="fs-3 d-block d-lg-inline">Emily Kaldwin - Impératrice des Isles</span>
 							<div class="fs-2 rating-color">
 								<i class="bi bi-star-fill"></i>
 								<i class="bi bi-star-fill"></i>
@@ -254,7 +252,7 @@
 							</div>
 						</div>
 						<div class="card-body pb-5">
-							<h3 class="card-title">Services exceptionnels pour les morts "accidentelles"</h3>
+							<h3 class="card-title">Services exceptionnels pour causer des accidents</h3>
 							<p class="card-text">Avec l'aide de Corvo, j'ai pu rétablir ma règne
 								sur les Isles par détruire le tyranny de Hiram Burrows, sans causer tellement de chaos 
 								que les Isles se tombent en anarchie.
@@ -270,26 +268,26 @@
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carousel-revue-client"
 				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="carousel-control-prev-icon d-none d-lg-block" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
 			<button class="carousel-control-next" type="button" data-bs-target="#carousel-revue-client"
 				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="carousel-control-next-icon d-none d-lg-block" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
 
-
-		<div class="w-75 container p-5">
-			<div class="text-center">
+		<!-- Ecrire un Revue -->
+		<div class="col-12 col-md-9 col-xl-6 container">
+			<div class="text-center py-5">
 				<button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#ecrit-revue"
 					aria-expanded="false" aria-controls="ecrit-revue">
 					Écrit un revue
 				</button>
 			</div>
-			<div class="collapse p-5" id="ecrit-revue">
-				<form action="#" onclick="() => {return;}">
+			<div class="collapse" id="ecrit-revue">
+				<form action="#">
 					<h2>Évaluer le service</h2>
 
 					<label for="star-rating">Note sur 5 étoiles</label>

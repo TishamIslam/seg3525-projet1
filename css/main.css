@@ -12,17 +12,45 @@
     color: #c72b2b ; /* same as .text-primary-light */
 }
 
-#accueil-splash {
-    height: 100vh; width: 100%; 
-    background-image: url('../images/bullying-at-work.jpg'); 
+.splash {
+    width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     object-fit: cover;
+}
 
+.banner-parent {
+    width: 100%;
+    height: 240px;
 }
-#accueil-splash > div {
-    background-color: #212529B0;
+
+.banner-left {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center left;
 }
+
+.banner-right {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+}
+
+.splash-desktop {
+    height: 95vh;
+}
+.splash-mobile {
+    height: 90vh;
+}
+
 
 .text-outline-dark {
     text-shadow: -1px 1px 0 #100000,
@@ -48,15 +76,6 @@
 
 .rating-color{
     color:#fbc634 !important;
-}
-
-#accueil-splash-small {
-    height: 90vh; width: 100%; 
-    background-image: url('../images/bloody_skull_design_by_ds_designs_on_da-d5rj06d.png'); 
-    background-position: center center;
-    background-repeat: no-repeat;
-    /* object-fit: cover; */
-    background-size: cover;
 }
 
 .bg-body {

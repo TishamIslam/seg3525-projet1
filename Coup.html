@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/primary-override.css">
+    <link rel="stylesheet" href="css/primary-light.css">
+    <link rel="stylesheet" href="webfontkit/stylesheet.css">
+
+    <title>EZ Dead - Acceuil</title>
+</head>
+
+<body class="bg-body">
+    <div w3-include-html="header.html"></div>
+
+    <div class="banner-parent banner-right w-100 bg-white py-2 d-lg-none"
+        style="background-image: url(images/sniper.webp);">
+        <span class="display-2 m-2 p-2 text-primary-light align-top bg-dark bg-opacity-75 
+        fs-1  text-outline-dark">Arranger un coup</span>
+    </div>
+
+    <div class="w-100 d-none d-lg-block position-relative">
+        <div class="banner-parent row g-0">
+            <div class="bg-black banner-left col" style="background-image: url(images/gunshot.webp);"></div>
+            <div class="bg-white banner-right col" style="background-image: url(images/sniper.webp);"></div>
+        </div>
+        <h2 class="m-2 p-2 text-primary-light bg-dark bg-opacity-50
+                fs-1  text-outline-dark absolute-center">Arranger un coup</h2>
+    </div>
+    <div class="container">
+        <form action="confirmation.html" class="mb-5" method="post" >
+            <h3 class=" text-primary-light">
+                Informations sur votre victime
+            </h3>
+            <span>* Indique qu'un info est requise</span>
+            <br><br>
+            <label for="nom-victime">Nom Complet *</label>
+            <input class="form-control mb-2" type="text" name="nom-victime" id="nom-victime">
+
+            <label for="adresse-victime">Adresse Complet *</label>
+            <input class="form-control mb-2" type="text" name="adresse-victime" id="adresse-victime">
+
+            <fieldset>
+                <legend class="h4 text-primary-light">Expert(s) Préféré(s) *</legend>
+                <div class="form-check">
+                    <input type="checkbox" name="expert-none" class="form-check-input" value="NA">
+                    <label for="expert-none" class="form-check-label">Pas de préférence</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="expert-1" class="form-check-input" value="A47">
+                    <label for="expert-1" class="form-check-label">Agent 47 - Excelle dans la furtivité</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="expert-2" class="form-check-input" value="AD">
+                    <label for="expert-2" class="form-check-label">Madame Alcina - Excelle en meurtres
+                        explicites</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="expert-3" class="form-check-input" value="CA">
+                    <label for="expert-3" class="form-check-label">Corvo Attano - Excelle en morts
+                        "accidentelles"</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="expert-4" class="form-check-input" value="AJ">
+                    <label for="expert-4" class="form-check-label">Adam Jensen - Spécialiste en infiltration et
+                        implantation</label>
+                </div>
+            </fieldset>
+
+            <label for="reference">Référencé par: </label>
+            <input class="form-control mb-2" type="text" name="reference" id="reference">
+
+            <label for="methode">Quel service est ce que vous voulez? *</label>
+            <select class="form-select mb-2" name="methode" id="methode">
+                <option value="ME"> Meurtre Explicite</option>
+                <option disabled> > Je veux envoyer un message</option>
+                <option disabled> > Coût au moins 40000 $</option>
+                <option value="IE">Implantation d'Évidence</option>
+                <option disabled> > Je veux que leur vie soit ruinée</option>
+                <option disabled> > Coût au moins 10000 $</option>
+                <option value="MA"> Mort "Accidentelle" </option>
+                <option disabled> > Je veux que le monde pense que c'était un accident</option>
+                <option disabled> > Coût au moins 25000 $</option>
+                <option value="IF">Infiltration </option>
+                <option disabled> > Je veux voler quelque chose importantt</option>
+                <option disabled> > Coût au moins 30000 $</option>
+            </select>
+
+            <label for="images-victime"></label>
+            <input multiple class="form-control mb-4" type="file" name="images-victime" id="images-victime">
+
+            <!-- form pour discuter les détails -->
+            <h3 class="text-primary-light "> Discuter les détails </h3>
+            <span>* Indique qu'un info est requise</span>
+            <details>
+                <summary>Pourquoi est ce que je dois discuter ça?</summary>
+                <p>Car il y a beaucoup de détails qu'on doit avoir pour
+                    donner vous le meilleur service possible, cela nécessite
+                    un discussion plus longue. Dépendant de ces détails, le prix
+                    peut être augmentée (p.ex. si vous voulez tuer un personne de profil élevé).
+                    Pour les tâches simples, comme un délit de fuite, un tel discussion prendrait
+                    à peu près 10 minutes, mais pour quelque chose complexe on peux avoir plusieurs
+                    discussions.
+                </p>
+            </details>
+
+            <label for="nom">Nom Complet *</label>
+            <input class="form-control mb-2" type="text" name="nom" id="nom">
+
+            <label for="adresse-victime">Adresse Complet *</label>
+            <input class="form-control mb-2" type="text" name="adresse" id="adresse">
+
+            <label for="discussion-date">Date de discussion * </label>
+            <input class="form-control mb-2" type="date" name="discussion-date" id="discussion-date">
+
+            <label for="discussion-temps">Temps de discussion * </label>
+            <input class="form-control mb-2" type="time" name="discussion-temps" id="discussion-temps">
+
+            <label for="telephone">Numéro de Téléphone * </label>
+            <input class="form-control mb-2" type="tel" name="telephone" id="telephone">
+
+            <label for="courriel">Adresse Courriel * </label>
+            <input class="form-control mb-2" type="email" name="courriel" id="courriel">
+
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+
+        </form>
+    </div>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>w3.includeHTML();</script>
+
+</html>
