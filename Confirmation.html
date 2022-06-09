@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/primary-override.css">
+    <link rel="stylesheet" href="css/primary-light.css">
+    <link rel="stylesheet" href="webfontkit/stylesheet.css">
+
+    <title>EZ Dead - Confirmation</title>
+</head>
+
+<body class="bg-body">
+    <div w3-include-html="header.html"></div>
+
+    <div class="container py-2">
+        <h2>Merci pour avoir "booked" un consultation avec nous!</h2>
+        <p class="lead" id="date-temps">Le date et temps de votre réservation est sur le </p>
+        <p>On vait discuter des informations importants tels que le montant que vous devriez payez, 
+            comment vous pouvez payez, vos préférences de comment on devrait accomplir notre tâche, 
+            (p.ex. si vous voulez un méthode spécifique de tuer votre cible), et toutes sortes d'autres
+            petits détails. Vous pouvez regarder le partie pertinente de notre FAQ en bas.
+        </p>
+    </div>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>w3.includeHTML();</script>
+<script>
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    let params = new URLSearchParams(location.search);
+    let dateTemps = " " + (new Date(params.get('discussion-date'))).toLocaleDateString("fr-CA", dateOptions) + ' à ' + params.get('discussion-temps')
+    document.getElementById('date-temps').innerText += dateTemps
+</script>
+
+</html>

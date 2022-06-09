@@ -5,13 +5,6 @@
     color: #c72b2b ; /* same as .text-primary-light */
 }
 
-.bradley-gratis {
-    font-family: 'bradley_gratisregular',  sans-serif;
-    font-weight:normal;
-    font-style:normal;
-    color: #c72b2b ; /* same as .text-primary-light */
-}
-
 .splash {
     width: 100%;
     background-position: center center;
@@ -79,7 +72,17 @@
 }
 
 .bg-body {
-    background-color: #EFE0E0 !important;
+    background-color: #eee4e4 !important;
+}
+
+/* Apply text-primary-light to all headers by default */
+h1, h2, h3, h4, h5, h6 {
+    color: #c72b2b ; /* same as .text-primary-light */
+}
+
+.list-group-item-action.active {
+    background-color: #9d2121;
+    border-color: #901f1f;
 }
 
 /* .bg-primary-light-trans */

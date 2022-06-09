@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/primary-override.css">
+    <link rel="stylesheet" href="css/primary-light.css">
+    <link rel="stylesheet" href="webfontkit/stylesheet.css">
+
+    <title>EZ Dead - À Propos</title>
+</head>
+
+<body class="bg-body">
+    <div w3-include-html="header.html"></div>
+
+    <div class="container p-5">
+        <h2>EZ Dead - Notre Mission</h2>
+        <p class="lead">Nous croyons que toute service, même ceux qui sont typiquement illégales,
+            devrait avoir des professionnels qui sait ce qu'ils font très bien et qui peut
+            offrir leur expertise dans un façon accessible et convenable.
+        </p>
+        <p>Pour accomplir
+            cette but, nous avons embauché une multitude d'experts pour créer un entreprise
+            dédié à l'infiltration, l'espionnage industriel, et les méthodes pour éliminer
+            vos enemies, particulièrement le meurtre. Notre équipe est fière de tout ce que
+            nous avons accompli, et on serait très joyeux d'offrir nos services à vous. Même
+            si vous décidez que vous voulez un autre type de solution, nous pouvons vous
+            réferrer à un de nos partenaires numéreux, et pour certains, offrir un rabais! </p>
+    </div>
+
+    <div class="container p-5 pt-0">
+        <h2>Liste de toutes nos services</h2>
+        <div class="row">
+            <div class="list-group col-12 col-md-4" id="services">
+                <a href="#" card-file="explicite.html" class="list-group-item list-group-item-action active" aria-current="true">
+                    Meutre Explicite
+                </a>
+                <a href="#" card-file="preuves.html" class="list-group-item list-group-item-action">Implantation de Preuves</a>
+                <a href="#" card-file="accidentelle.html" class="list-group-item list-group-item-action">Mort "Accidentelle"</a>
+                <a href="#" card-file="infiltration.html" class="list-group-item list-group-item-action">Infiltration</a>
+                <a href="#" card-file="autre-service.html" class="list-group-item list-group-item-action">Autre</a>
+            </div>
+            <div class="d-none d-md-block col-md-2"></div>
+            <div class="p-3 p-lg-0 col-12 col-md-6" id="selected-card" w3-include-html=""></div>
+        </div>
+    </div>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>w3.includeHTML();</script>
+<script>
+    let services = document.getElementById("services").children
+    let selectedCard = document.getElementById("selected-card")
+    selectedCard.setAttribute("w3-include-html", "cards/explicite.html")
+    w3.includeHTML()
+
+    for (let service of services) {
+        service.addEventListener('click', e => {
+            e.preventDefault();
+            let selectedListItem = e.target;
+            let siblings = selectedListItem.parentElement.children
+            for (let sibling of siblings) {
+                sibling.className = sibling.className.replace("active", "")
+                sibling.setAttribute("aria-current", false)
+            }
+            selectedListItem.className += " active"
+            selectedListItem.setAttribute("aria-current", true)
+            document.getElementById("selected-card").setAttribute("w3-include-html", "cards/" + selectedListItem.getAttribute("card-file"))
+            w3.includeHTML()
+        });
+    }
+
+</script>
+
+</html>
