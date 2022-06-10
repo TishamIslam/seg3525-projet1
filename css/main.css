@@ -82,10 +82,6 @@
     color: #fbc634 !important;
 }
 
-.bg-body {
-    background-color: #eee4e4 !important;
-}
-
 /* Apply text-primary-light to all headers by default */
 h1, h2, h3, h4, h5, h6 {
     /* same as .text-primary-light */
@@ -120,4 +116,9 @@ h1, h2, h3, h4, h5, h6 {
 /* This part was found here https://stackoverflow.com/a/67640477 */
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23621515'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #eee4e4 !important;
 }
