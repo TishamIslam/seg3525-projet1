@@ -19,14 +19,15 @@
 <body>
     <div w3-include-html="header.html"></div>
 
-    <div class="container py-2">
+    <div class="container py-2 min-vh-100">
         <h2>Merci pour avoir réservé un consultation avec nous!</h2>
         <p class="lead" id="date-temps">Le date et temps de votre réservation est sur le </p>
         <p>On vait discuter des informations importants tels que le montant que vous devriez payez, 
             comment vous pouvez payez, vos préférences de comment on devrait accomplir notre tâche, 
             (p.ex. si vous voulez un méthode spécifique de tuer votre cible), et toutes sortes d'autres
-            petits détails. Vous pouvez regarder le partie pertinente de notre FAQ en bas.
+            petits détails. Vous pouvez regarder les parties pertinentes dans notre FAQ en bas.
         </p>
+        <div w3-include-html="components/FAQuestions.html"></div>
     </div>
 
     <div w3-include-html="footer.html"></div>
