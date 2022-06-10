@@ -1,8 +1,9 @@
 .angel-rhapsody {
-    font-family: 'angel_rhapsodyregular',  sans-serif;
-    font-weight:normal;
-    font-style:normal;
-    color: #c72b2b ; /* same as .text-primary-light */
+    font-family: 'angel_rhapsodyregular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #c72b2b;
+    /* same as .text-primary-light */
 }
 
 .splash {
@@ -11,9 +12,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .splash-desktop {
     height: 95vh;
 }
+
 .splash-mobile {
     height: 90vh;
 }
@@ -37,24 +40,26 @@
 
 .absolute-center {
     position: absolute;
-    top: 50%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
+    /* position the top  edge of the element at the middle of the parent */
+    top: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    left: 50%;
 
     transform: translate(-50%, -50%);
 }
 
 .text-outline-dark {
     text-shadow: -1px 1px 0 #100000,
-    1px 1px 0 #100000,
-    1px -1px 0 #100000,
-    -1px -1px 0 #100000;
+        1px 1px 0 #100000,
+        1px -1px 0 #100000,
+        -1px -1px 0 #100000;
 }
 
 .text-outline-light {
     text-shadow: -1px 1px 0 #efe0e0,
-    1px 1px 0 #efe0e0,
-    1px -1px 0 #efe0e0,
-    -1px -1px 0 #efe0e0;
+        1px 1px 0 #efe0e0,
+        1px -1px 0 #efe0e0,
+        -1px -1px 0 #efe0e0;
 }
 
 .profile-pic {
@@ -73,8 +78,8 @@
 
 }
 
-.rating-color{
-    color:#fbc634 !important;
+.rating-color {
+    color: #fbc634 !important;
 }
 
 .bg-body {
@@ -83,7 +88,8 @@
 
 /* Apply text-primary-light to all headers by default */
 h1, h2, h3, h4, h5, h6 {
-    color: #c72b2b ; /* same as .text-primary-light */
+    /* same as .text-primary-light */
+    color: #c72b2b;
 }
 
 .list-group-item-action.active {
@@ -92,15 +98,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Override some form styles */
+/* Override some form and accordion styles */
 .form-check-input:checked {
     background-color: #811919;
     border: 1px solid #811919;
 }
 
-.form-control:focus, 
-.form-check-input:focus, 
-.form-select:focus {
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus,
+.accordion-button:focus {
     border-color: #FF0000;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
-  }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f3caca;
+    color: #621515;
+}
+
+/* This part was found here https://stackoverflow.com/a/67640477 */
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23621515'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}

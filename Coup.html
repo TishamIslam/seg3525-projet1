@@ -19,31 +19,32 @@
 <body class="bg-body">
     <div w3-include-html="header.html"></div>
 
+    <!-- Banners, might not use after all -->
     <!-- Banner for small screens -->
-    <div class="banner-parent banner-right w-100 bg-white py-2 mt-3 d-lg-none"
+    <!-- <div class="banner-parent banner-right w-100 bg-white py-2 mt-3 d-lg-none"
         style="background-image: url(images/sniper.webp);">
-        <span class="display-2 m-2 p-2 text-primary-light align-top bg-dark bg-opacity-75 
-        fs-1  text-outline-dark">Arranger un coup</span>
-    </div>
-
+        <span class="display-2 m-2 p-2 text-primary-light align-top bg-dark bg-opacity-50 
+        fs-1 text-outline-dark">Arranger un coup</span>
+    </div> -->
     <!-- Banner for large screens -->
-    <div class="w-100 d-none d-lg-block position-relative">
+    <!-- <div class="w-100 d-none d-lg-block position-relative">
         <div class="banner-parent row g-0">
             <div class="bg-black banner-left col" style="background-image: url(images/gunshot.webp);"></div>
             <div class="bg-white banner-right col" style="background-image: url(images/sniper.webp);"></div>
         </div>
         <h2 class="m-2 p-2 text-primary-light bg-dark bg-opacity-50
                 fs-1  text-outline-dark absolute-center">Arranger un coup</h2>
-    </div>
+    </div> -->
+
+
 
     <!-- Formulaire -->
-    <div class="container py-3">
-        <form action="Confirmation.html" class="mb-5" method="get" >
-            <h3 class=" text-primary-light">
-                Informations sur votre victime
-            </h3>
-            <span>* Indique qu'un info est requise</span>
-            <br><br>
+    <div class="container py-2">
+        <h2>Arranger un coup</h2>
+        <h3> Informations sur votre victime </h3>
+        <span>* Indique qu'un info est requise</span>
+        <form action="Confirmation.html" class="my-3" method="get">
+
             <label for="nom-victime">Nom Complet *</label>
             <input required class="form-control mb-3" type="text" name="nom-victime" id="nom-victime">
 
@@ -117,23 +118,7 @@
                 </p>
             </details>
 
-            <label for="nom">Nom Complet *</label>
-            <input required class="form-control mb-3" type="text" name="nom" id="nom">
-
-            <label for="adresse">Adresse Complet *</label>
-            <input required class="form-control mb-3" type="text" name="adresse" id="adresse">
-
-            <label for="discussion-date">Date de discussion * </label>
-            <input required class="form-control mb-3" type="date" name="discussion-date" id="discussion-date">
-
-            <label for="discussion-temps">Temps de discussion * </label>
-            <input required class="form-control mb-3" type="time" name="discussion-temps" id="discussion-temps">
-
-            <label for="telephone">Numéro de Téléphone * </label>
-            <input required class="form-control mb-3" type="tel" name="telephone" id="telephone">
-
-            <label for="courriel">Adresse Courriel * </label>
-            <input required class="form-control mb-3" type="email" name="courriel" id="courriel">
+            <div w3-include-html="forms/consultation-form.html"></div>
 
             <button type="submit" class="btn btn-primary">Soumettre</button>
 

@@ -13,21 +13,39 @@
     <link rel="stylesheet" href="css/primary-light.css">
     <link rel="stylesheet" href="webfontkit/stylesheet.css">
 
-    <title>EZ Dead - Confirmation</title>
+    <title>EZ Dead - </title>
 </head>
 
 <body class="bg-body">
     <div w3-include-html="header.html"></div>
 
     <div class="container py-2">
-        <h2>Merci pour avoir réservé un consultation avec nous!</h2>
-        <p class="lead" id="date-temps">Le date et temps de votre réservation est sur le </p>
-        <p>On vait discuter des informations importants tels que le montant que vous devriez payez, 
-            comment vous pouvez payez, vos préférences de comment on devrait accomplir notre tâche, 
-            (p.ex. si vous voulez un méthode spécifique de tuer votre cible), et toutes sortes d'autres
-            petits détails. Vous pouvez regarder le partie pertinente de notre FAQ en bas.
+        <h2 class="text-primary-light">Contactez-nous!</h2>
+        <p>EZ Dead HQ <br>
+            321 Sesame Street, <br>
+            ON, Canada, A2C 4E6 <br>
+        <p>Appelez <a class="text-primary-light" href="tel:+05555555555">(555) 555 5555</a> ou visitez nous directement,
+            disponible à partir de 9:00 à 20:00 EST, sauf jeudi.</p>
+        <p>Alternativement, envoyez un courriel à <a class="text-primary-light"
+                href="mailto:a47@ezdead.com">a47@ezdead.com</a> si vous préférez.
         </p>
+        <p>Si vous n'êtes pas sûr si vous voulez utiliser nos services, vous pouvez nous consulter
+            <b>gratuitement</b>. Nous pouvons aussi vous réferrez à nos divers partenaires commerciaux
+            si vous décidez qu'un autre sorte de service est nécessaire, et pour certaines partenaires,
+            nous pouvons aussi vous accordez un rabais.
+        </p>
+
+        <h3>Réserver une consultation</h3>
+        <span>* Indique qu'un info est requise</span>
+
+        <form action="Confirmation.html" method="get" class="my-3" >
+
+            <div w3-include-html="forms/consultation-form.html"></div>
+
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
     </div>
+
 
     <div w3-include-html="footer.html"></div>
 </body>
@@ -37,12 +55,5 @@
     crossorigin="anonymous"></script>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 <script>w3.includeHTML();</script>
-<script>
-    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    let params = new URLSearchParams(location.search);
-    let date = new Date(params.get('discussion-date'))
-    let dateTemps = " " + date.toLocaleDateString("fr-CA", dateOptions) + ' à ' + params.get('discussion-temps')
-    document.getElementById('date-temps').innerText += dateTemps +"."
-</script>
 
 </html>
